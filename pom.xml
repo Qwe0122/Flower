@@ -54,7 +54,6 @@
                 <version>0.0.8</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>com.example.hello/com.example.hello.HelloApplication</mainClass>
@@ -67,6 +66,26 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.panteleyev</groupId>
+                <artifactId>jpackage-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <configuration>
+                    <name>App</name>
+                    <appVersion>1.0.0</appVersion>
+                    <vendor>com.example</vendor>
+                    <destination>target/dist</destination>
+                    <module>com.example.hello/com.example.hello.App</module>
+                    <runtimeImage>target/app</runtimeImage>
+                    <winDirChooser>false</winDirChooser>
+                    <winConsole>false</winConsole>
+                    <winMenu>true</winMenu>
+                    <winShortcut>true</winShortcut>
+                    <javaOptions>
+                        <option>-Dfile.encoding=UTF-8</option>
+                    </javaOptions>
+                </configuration>
             </plugin>
         </plugins>
     </build>
