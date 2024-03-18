@@ -18,23 +18,35 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>17.0.10</version>
+            <version>19.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>17.0.10</version>
+            <version>19.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-            <version>17.0.10</version>
+            <version>19.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>17.0.10</version>
+            <version>19.0.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.fxyz3d</groupId>
+            <artifactId>fxyz-importers</artifactId>
+            <version>0.5.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/us.ihmc/jimStlMeshImporterJFX -->
+        <dependency>
+            <groupId>us.ihmc</groupId>
+            <artifactId>jimStlMeshImporterJFX</artifactId>
+            <version>0.7</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -72,11 +84,11 @@
                 <artifactId>jpackage-maven-plugin</artifactId>
                 <version>1.4.0</version>
                 <configuration>
-                    <name>App</name>
-                    <appVersion>1.0.0</appVersion>
+                    <name>Flower</name>
+                    <appVersion>1.0</appVersion>
                     <vendor>com.example</vendor>
                     <destination>target/dist</destination>
-                    <module>com.example.hello/com.example.hello.App</module>
+                    <module>com.example.hello/com.example.hello.HelloApplication</module>
                     <runtimeImage>target/app</runtimeImage>
                     <winDirChooser>false</winDirChooser>
                     <winConsole>false</winConsole>
